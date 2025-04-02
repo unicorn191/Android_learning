@@ -33,12 +33,13 @@ class HobbiesAdapter(private val context:Context, private val hobbies: List<Hobb
     inner class HobbiesViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         private var txvTitle: TextView = itemView.findViewById(R.id.txvTitle)
         private var imgShare:ImageView = itemView.findViewById(R.id.imgShare)
-        var currentHobby:Hobbies? = null
-        var currentPosition:Int = 0
+        private var currentHobby:Hobbies? = null
+        private var currentPosition:Int = 0
 
         init {
             itemView.setOnClickListener {
-                Toast.makeText(context,currentHobby!!.title, Toast.LENGTH_SHORT).show()
+               // Toast.makeText(context,currentHobby!!.title, Toast.LENGTH_SHORT).show()
+                context.showToast(currentHobby!!.title)
             }
 
             imgShare.setOnClickListener {
