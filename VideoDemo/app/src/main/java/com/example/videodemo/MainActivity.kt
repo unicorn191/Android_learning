@@ -2,6 +2,8 @@ package com.example.videodemo
 
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
 import android.widget.MediaController
 import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
@@ -24,4 +26,5 @@ class MainActivity : AppCompatActivity() {
         videoView.requestFocus()
         videoView.start()
     }
+
 }
